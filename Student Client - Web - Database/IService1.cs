@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
+﻿using System.Collections.Generic;
 using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
 
 namespace Student_Client___Web___Database
 {
@@ -12,13 +7,13 @@ namespace Student_Client___Web___Database
     [ServiceContract]
     public interface IService1
     {
-     
-        
         [OperationContract]
         IList<Student> GetAllStudents();
 
+
         [OperationContract]
         Student GetStudentById(int id);
+
 
         [OperationContract]
         IList<Student> GetStudentsByName(string name);
@@ -30,6 +25,4 @@ namespace Student_Client___Web___Database
 
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.
-    
-    
 }
